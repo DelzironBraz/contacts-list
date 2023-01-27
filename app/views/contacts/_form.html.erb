@@ -1,0 +1,37 @@
+<%= form_with(model: contact) do |form| %>
+  <% if contact.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(contact.errors.count, "error") %> prohibited this contact from being saved:</h2>
+
+      <ul>
+        <% contact.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <form>
+    <div class="mb-3">
+      <%= form.text_field :fist_name, class:"form-control", placeholder: 'First Name' %>
+    </div>
+
+    <div class="mb-3">
+      <%= form.text_field :last_name, class:"form-control", placeholder: 'Last Name' %>
+    </div>
+
+    <div class="mb-3">
+      <%= form.text_field :email,  class:"form-control", placeholder: 'Email' %>
+    </div>
+
+    <div class="mb-3">
+      <%= form.text_field :phone, class:"form-control", placeholder: 'Phone Number' %>
+    </div>
+
+    <div class="mb-3">
+      <%= form.text_field :twitter, class:"form-control", placeholder: 'Twitter' %>
+    </div>
+    <%= link_to "Back to contacts", contacts_path, class:"btn btn-dark"%>
+    <%= form.submit 'Create New Contact', class:"btn btn-secondary" %>
+  </form>
+<% end %>

@@ -1,0 +1,11 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Contacts</h1>
+
+<div id="contacts">
+  <% @contacts.each do |contact| %>
+    <%= render contact %>
+  <% end %>
+  <%= link_to "New contact", new_contact_path, class:"btn btn-secondary" %>
+</div>
+<br>

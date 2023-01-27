@@ -1,0 +1,23 @@
+<div id="<%= dom_id contact %>">
+  <table class="table table-hover table-striped">
+    <thead>
+      <tr>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Email</th>
+        <th scope="col">Phone</th>
+        <th scope="col">Twitter</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><%= contact.fist_name %></td>
+        <td><%= contact.last_name %></td>
+        <td><%= contact.email %></td>
+        <td><%= contact.phone %></td>
+        <td><%= contact.twitter %></td>
+        <td><%= link_to "Show", contact, class:"btn btn-secondary"%></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
