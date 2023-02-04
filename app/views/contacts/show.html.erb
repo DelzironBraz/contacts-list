@@ -1,0 +1,37 @@
+<div class="alert alert-success" role="alert">
+  <%= notice %>
+</div>
+
+<div class="p-5 mb-4 bg-light rounded-3">
+  <div class="container-fluid py-5">
+    <h1 class="display-5 fw-bold">
+      <%= @contact.fist_name %>
+      <%= @contact.last_name %>
+    </h1>
+    <div class="list-group">
+      <a class="list-group-item list-group-item-action list-group-item-dark">
+        Email: <%=@contact.email %>
+      </a>
+      <a class="list-group-item list-group-item-action list-group-item-dark">
+        Phone number: <%= @contact.phone %>
+      </a>
+      <a class="list-group-item list-group-item-action list-group-item-dark">
+        Twitter: <%= @contact.twitter %>
+      </a>
+    </div>
+  </div>
+  <div class="container text-center">
+    <div class="row">
+      <div class="col">
+        <%= link_to "Edit this contact", edit_contact_path(@contact), class:"btn btn-dark" %>
+      </div>
+      <div class="col">
+        <%= link_to "Back to contacts", contacts_path, class:"btn btn-secondary" %>
+      </div>
+      <div class="col">
+        <%= button_to "Destroy this contact", @contact, method: :delete, class:"btn btn-dark" %>
+      </div>
+    </div>
+  </div>
+</div>
+
