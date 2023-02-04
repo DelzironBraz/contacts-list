@@ -5,9 +5,10 @@
     <%= image_tag("undraw_Contact_us_re_4qqt.png", size: "567x304", alt: "login_logo")%>
   </aside>
   <section class="col align-content-center log_in_form">
-    <h2>Log in</h2>
-    <br>
-    <form>
+    <div class="log_in_card">
+      <h2>Contact List</h2>
+      <br>
+      <form>
         <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
           <div class="mb-3">
             <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control", placeholder: "Email:" %>
@@ -15,8 +16,12 @@
           </div>
           <div class="mb-3">
             <%= f.password_field :password, autocomplete: "current-password", class: "form-control", placeholder: "Password:" %>
+            <div id="emailHelp" class="form-text">
+              <%= link_to "Forgot your password ?", new_password_path(resource_name) %>
+            </div>
           </div>
-          <%= f.submit "Log in",  class: "btn btn-light" %>
+          <%= f.submit "Login",  class: "btn btn-light" %>
+          <%= link_to "Sign up", new_registration_path(resource_name), class: "btn btn-outline-primary" %>
             <% if devise_mapping.rememberable? %>
               <div class="field">
                 <%= f.check_box :remember_me %>
@@ -25,7 +30,7 @@
             <% end %>
         <% end %>
       </form>
-      <%= render "devise/shared/links" %>
+    </div>
   </section>
 </main>
 
