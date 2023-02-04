@@ -1,24 +1,59 @@
-/* .log_in {
-    border: 1px solid red;
-    margin: 0;
-    padding: 0;
-    display: 0;
-    height: 100%;
-    width: 100%;
-}
-
-.log_in h2, #emailHelp, .field {
-    color: white;
-}
-
-.log_in_banner {
+.log_in {
     display: flex;
     justify-content: center;
-    flex-direction: column;
-    margin-top: 100px;
+    align-items: center;
+    height: 90vh;
+    width: 100vw;
 }
 
 .log_in_form {
-    height: 100%;
+    border-radius: 15px 0px 0px 15px;
     background-color: rgb(108,99,255);
-} */
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.log_in_card {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.btn-light {
+    background-color: rgb(108,99,255);
+    color: aliceblue;
+    border: 1px solid rgb(108,99,255);
+    margin: 0 0 10px 0;
+    width: 100%;
+}
+
+.btn-light:hover {
+    background-color: white;
+    color: rgb(108,99,255);
+    border: 1px solid rgb(108,99,255);
+}
+
+.btn-outline-primary {
+    background-color: white;
+    color: rgb(108,99,255);
+    border: 1px solid rgb(108,99,255);
+    margin: 0 0 10px 0;
+    width: 100%;
+}
+
+.btn-outline-primary:hover {
+    background-color: rgb(108,99,255);
+    color: aliceblue;
+    border: 1px solid rgb(108,99,255);
+}
+
+
+.form-control {
+    margin-bottom: 10px;
+}
+
+h2 {
+    text-align: center;
+}
